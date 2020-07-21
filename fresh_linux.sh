@@ -24,3 +24,8 @@ source .bashrc
 source .profile
 
 rm get-pip.py
+
+pip install virtualenv
+virtualenv -p python3.7 venv
+echo 'source ~/venv/bin/activate' >> .bashrc
+source .bashrc
