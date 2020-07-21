@@ -1,6 +1,9 @@
 #!/bin/bash
 # Script to be used on a fresh linux installation
 
+# Go to home directory
+cd ~/
+
 # Fetch update
 sudo apt-get update
 
@@ -18,3 +21,6 @@ echo '' >> .bashrc
 echo 'alias python=python3.7' >> .bashrc
 echo 'alias pip=pip3.7' >> .bashrc
 source .bashrc
+source .profile
+
+rm get-pip.py
