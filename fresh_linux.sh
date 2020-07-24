@@ -26,7 +26,8 @@ rm get-pip.py
 
 # Setup python virtualenv
 python3.7 -m pip install virtualenv
-virtualenv -p python3.7 venv
-echo 'source ~/venv/bin/activate' >> .bashrc
 source .bashrc
 source .profile
+virtualenv -p python3.7 venv
+echo 'source ~/venv/bin/activate' >> .bashrc
+
