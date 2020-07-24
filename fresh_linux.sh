@@ -1,6 +1,10 @@
 #!/bin/bash
 # Script to be used on a fresh linux installation
 
+# Copy my configuration to home
+cp ./my_conf/* ~/ # Copy all files
+cp ./my_conf/.* ~/ # Copy all . files
+
 # Go to home directory
 cd ~/
 
@@ -11,27 +15,18 @@ sudo apt-get update
 sudo apt-get upgrade -y
 
 # Install commonly used pakcages
-sudo apt-get install -y curl python3.7 python3-setuptools libpython3.7
+sudo apt-get install -y vim curl python3.7 python3-setuptools libpython3.7
 
 # Get PIP
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python3.7 get-pip.py
 
-# Set alias for python3.7
-echo '' >> .bashrc
-echo 'alias python=python3.7' >> .bashrc
-echo 'alias pip=pip3.7' >> .bashrc
-source .bashrc
-source .profile
-
 # Cleanup
 rm get-pip.py
 
 # Setup python virtualenv
-pip install virtualenv
+python3.7 -m pip install virtualenv
 virtualenv -p python3.7 venv
 echo 'source ~/venv/bin/activate' >> .bashrc
 source .bashrc
-
-# Copy my configuration to home
-cp ./my_conf/* ~/
+source .profile
