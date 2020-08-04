@@ -6,3 +6,6 @@ docker
 remote - containers
 vscode-proto3
 ejs language support
+gitlens
+remote - Containers
+remote - SSH
