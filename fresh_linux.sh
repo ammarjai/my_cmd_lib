@@ -15,7 +15,7 @@ sudo apt-get update
 sudo apt-get upgrade -y
 
 # Install commonly used pakcages
-sudo apt-get install -y vim curl python3.7 python3-setuptools libpython3.7
+sudo apt-get install -y tmux vim curl xclip python3.7 python3-setuptools libpython3.7
 
 # Get PIP
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
@@ -26,8 +26,7 @@ rm get-pip.py
 
 # Setup python virtualenv
 python3.7 -m pip install virtualenv
-source .bashrc
-source .profile
 virtualenv -p python3.7 venv
 echo 'source ~/venv/bin/activate' >> .bashrc
-
+source .bashrc
+source .profile
