@@ -1,2 +1,2 @@
-# My Commands Library
-Repository to holds all the useful command lines, whether it is bash, windows cmd or powershell and others.
+# my_cmd_lib
+Repository that holds my personal shell file, configuration, notes on my favourite extension for editor, etc.
